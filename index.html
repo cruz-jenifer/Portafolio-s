@@ -3,229 +3,419 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio</title>
-    <!-- Agrega esto en el <head> de tu HTML -->
+    <title>Jenifer Cruz | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Inter:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Syncopate:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="ruido-fondo"></div>
+    <div class="cursor-externo"></div>
+    <div class="cursor-interno"></div>
+
+    <div class="cargador">
+      <div class="texto-cargador">CARGANDO...</div>
+    </div>
+
     <header>
-      <div id="inicio">
-        <h1>Mi portafolio</h1>
-        <h2>Bienvenidos</h2>
-        <p>
-          El objetivo principal es mostrar mi perfil, habilidades y proyectos,
-          utilizando una estructura de <strong>one page website</strong> con un
-          diseño totalmente responsive.
-        </p>
+      <a href="#" class="logo objetivo-hover">JENIFER<span>CRUZ</span></a>
+      <div class="nav-derecha">
+        <a
+          href="Cruz Jenifer - CV.pdf"
+          target="_blank"
+          class="btn-cv-header objetivo-hover"
+          >CV</a
+        >
+        <div class="boton-menu objetivo-hover" data-accion="abrirMenu">
+          <div class="barra"></div>
+          <div class="barra"></div>
+          <div class="barra"></div>
+        </div>
       </div>
-      <div class="header-icon">
-        <img src="images/iconpc.png" alt="Ícono de computadora" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#sobremi">Sobre mí</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <main>
-      <section id="sobremi">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy estudiante de Ingeniería Informática y me especializo en
-          programación web full stack, actualmente enfocándome en front-end.
-          Domino lenguajes como C, HTML, CSS, Assembler y SQL, y he desarrollado
-          proyectos orientados a objetos para mejorar procesos de gestión. Me
-          destaco por mi compromiso y entusiasmo, y busco una oportunidad
-          laboral donde seguir aprendiendo y aportando con mi conocimiento
-          técnico.
+    <div class="menu-overlay">
+      <div class="contenido-menu">
+        <h2 class="texto-gradiente" data-en="MENU">MENÚ</h2>
+        <nav class="navegacion">
+          <a
+            href="#perfil"
+            class="link-menu objetivo-hover"
+            data-accion="abrirMenu"
+            data-en="PROFILE"
+            >PERFIL</a
+          >
+          <a
+            href="#proyectos"
+            class="link-menu objetivo-hover"
+            data-accion="abrirMenu"
+            data-en="PROJECTS"
+            >PROYECTOS</a
+          >
+          <a
+            href="#skills"
+            class="link-menu objetivo-hover"
+            data-accion="abrirMenu"
+            data-en="SKILLS"
+            >HABILIDADES</a
+          >
+          <a
+            href="#contacto"
+            class="link-menu objetivo-hover"
+            data-accion="abrirMenu"
+            data-en="CONTACT"
+            >CONTACTO</a
+          >
+        </nav>
+        <div class="selector-idioma en-menu objetivo-hover">
+          <div class="globo-3d">
+            <div class="anillo"></div>
+            <div class="anillo"></div>
+            <div class="anillo"></div>
+          </div>
+          <div class="etiqueta-idioma">ES / EN</div>
+          <div class="opciones-idioma">
+            <span class="btn-idioma activo" data-lang="es">ES</span>|<span
+              class="btn-idioma"
+              data-lang="en"
+              >EN</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero objetivo-hover" id="inicio">
+      <div class="fondo-bn parallax"></div>
+      <div class="fondo-color parallax"></div>
+      <div class="contenido-hero">
+        <h1
+          class="titulo-hero"
+          id="tituloDinamico"
+          data-cerca="FULL<br>STACK<br>DEV."
+          data-lejos="PORTAFOLIO"
+        >
+          PORTAFOLIO
+        </h1>
+        <p class="subtitulo-hero" data-en="ENGINEERING & CODE">
+          INGENIERÍA & CÓDIGO
         </p>
-      </section>
+        <div class="selector-idioma en-hero objetivo-hover">
+          <div class="globo-3d">
+            <div class="anillo"></div>
+            <div class="anillo"></div>
+            <div class="anillo"></div>
+          </div>
+          <div class="etiqueta-idioma">ES / EN</div>
+          <div class="opciones-idioma">
+            <span class="btn-idioma activo" data-lang="es">ES</span>|<span
+              class="btn-idioma"
+              data-lang="en"
+              >EN</span
+            >
+          </div>
+        </div>
+      </div>
+      <a
+        href="#perfil"
+        class="scroll-down objetivo-hover"
+        aria-label="Ir abajo"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+        </svg>
+      </a>
+    </section>
 
-      <section id="habilidades">
-        <h2>Mis habilidades</h2>
-        <section id="educacion">
-          <h3>Educación</h3>
-          <ul>
-            <li>
-              <strong>Ingeniería Informática</strong> - Universidad Nacional de
-              la Matanza (2022 - presente)
-            </li>
-            <li>
-              <strong>Programación web full stack</strong> - Universidad
-              Tecnológica Nacional (2025 - presente)
-            </li>
-            <li>
-              <strong>Programación front end</strong> - Universidad Tecnológica
-              Nacional (completado)
-            </li>
-          </ul>
-        </section>
-        <section id="habilidades-tecnicas">
-          <div id="herramientas">
-            <h3>Herramientas</h3>
-            <ul>
-              <li>Visual Studio Code</li>
-              <li>Git</li>
-              <li>GitHub</li>
+    <section id="perfil">
+      <div class="contenedor-seccion">
+        <span class="texto-gradiente" data-en="PROFESSIONAL PROFILE"
+          >PERFIL PROFESIONAL</span
+        >
+        <div class="grilla-perfil">
+          <div class="info-texto">
+            <div class="bloque-texto">
+              <p class="aparecer descripcion">
+                Combino la rigurosidad de la
+                <strong>Ingeniería Informática</strong> con la agilidad del
+                desarrollo web moderno. Especializada en
+                <strong>Stack MERN</strong> y soluciones escalables.
+              </p>
+              <br />
+              <p class="aparecer d1 descripcion">
+                Mi enfoque no solo es escribir codigo, si no diseñar
+                <strong>software de calidad</strong>, priorizando arquitectura y
+                eficiencia técnica.
+              </p>
+              <br />
+              <p class="aparecer d2 descripcion">
+                Abordo proyectos con mirada crítica sobre gestion datos y diseño
+                de sistemas.
+              </p>
+            </div>
+            <div class="aparecer d4">
+              <a
+                href="Cruz Jenifer - CV.pdf"
+                target="_blank"
+                class="boton-cv objetivo-hover"
+                data-en="DOWNLOAD RESUME"
+                >DESCARGAR CV</a
+              >
+            </div>
+            <div class="lista-educacion">
+              <h3 class="titulo-edu aparecer" data-en="EDUCATION">EDUCACIÓN</h3>
+              <div class="item-edu aparecer objetivo-hover d1">
+                <span class="fecha">MAR 2022 – PRESENTE</span>
+                <h4 data-en="Computer Engineering">
+                  Ingeniería en Informática
+                </h4>
+                <p class="institucion">UNLaM</p>
+                <div class="badge" data-en="Status: Advanced">
+                  Estado: Avanzado
+                </div>
+              </div>
+              <div class="item-edu aparecer objetivo-hover d2">
+                <span class="fecha">OCT 2025 – FEB 2026</span>
+                <h4 data-en="Full Stack Diploma">Diplomatura Web Full Stack</h4>
+                <p class="institucion">UTN FRBA</p>
+                <div class="badge" data-en="MERN Stack Intensive">
+                  Stack MERN Intensivo
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen-perfil objetivo-hover tilt" id="fotoPerfil">
+            <img src="img6.jpg" alt="Jenifer" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="contenedor-seccion">
+        <span class="texto-gradiente" data-en="SELECTED WORKS">TRABAJOS</span>
+        <h2 class="titulo-grande" data-en="PROJECTS">PROYECTOS</h2>
+
+        <article class="tarjeta-proyecto" data-indice="0">
+          <div class="visor-proyecto objetivo-hover tilt">
+            <div class="track-imagenes">
+              <div class="slide">
+                <img src="pimg1.jpg" class="img-scroll" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="pimg2.jpg" class="img-scroll" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="pimg3.jpg" class="img-scroll" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="pimg4.jpg" class="img-scroll" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="pimg5.jpg" class="img-scroll" loading="lazy" />
+              </div>
+            </div>
+            <button class="nav-btn prev objetivo-hover" data-accion="anterior">
+              &#10094;
+            </button>
+            <button class="nav-btn next objetivo-hover" data-accion="siguiente">
+              &#10095;
+            </button>
+            <div class="puntos">
+              <div class="punto activo" data-k="0"></div>
+              <div class="punto" data-k="1"></div>
+              <div class="punto" data-k="2"></div>
+              <div class="punto" data-k="3"></div>
+              <div class="punto" data-k="4"></div>
+            </div>
+          </div>
+          <div class="info-proyecto">
+            <h3 class="titulo-proyecto">POKÉMON SHOP</h3>
+            <p
+              class="aparecer"
+              data-en="SPA built with React focused on efficient complex state management."
+            >
+              SPA con React enfocada en estados complejos.
+              <strong>Redux</strong> centraliza el carrito para actualizaciones
+              síncronas.
+            </p>
+            <p
+              class="aparecer d1"
+              style="margin-top: 10px; font-size: 0.9em; opacity: 0.8"
+            >
+              Interfaz responsiva con renderizado condicional para categorías y
+              búsqueda.
+            </p>
+            <div class="etiquetas aparecer">
+              <span>REACT.JS</span><span>REDUX</span><span>VITE</span
+              ><span>POKEAPI</span>
+            </div>
+            <div class="aparecer d2" style="margin-top: 2rem">
+              <a
+                href="https://cruz-jenifer.github.io/tp-final-react--jenifer-cruz-/"
+                target="_blank"
+                class="btn-llamativo objetivo-hover"
+              >
+                <span class="texto-btn">VER PAGINA</span
+                ><span class="icono-btn">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-proyecto derecha" data-indice="0">
+          <div class="info-proyecto izquierda">
+            <h3 class="titulo-proyecto">AUDITOR COMERCIAL</h3>
+            <p
+              class="aparecer"
+              data-en="Cost optimization and inventory control for wholesalers."
+            >
+              <strong>Auditor (C)</strong>. Optimización de costos y control de
+              inventario mayorista.
+            </p>
+            <ul class="lista-detalles aparecer d1">
+              <li>
+                <strong>Prevención:</strong> Detección productos sin precio.
+              </li>
+              <li>
+                <strong>Datos:</strong> Normalización masiva de catálogos.
+              </li>
+              <li><strong>Márgenes:</strong> Reportes de volatilidad.</li>
             </ul>
-          </div>
-          <div id="lenguajes">
-            <h3>Lenguajes</h3>
-            <div class="skill-container">
-              <div class="skill-item">
-                <div class="skill-name">
-                  <span>HTML5</span>
-                  <span>95%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 95%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item">
-                <div class="skill-name">
-                  <span>CSS3</span>
-                  <span>90%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item">
-                <div class="skill-name">
-                  <span>JavaScript</span>
-                  <span>50%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 50%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item">
-                <div class="skill-name">
-                  <span>C</span>
-                  <span>90%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item">
-                <div class="skill-name">
-                  <span>Assembler</span>
-                  <span>75%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 75%"></div>
-                </div>
-              </div>
-
-              <div class="skill-item">
-                <div class="skill-name">
-                  <span>SQL</span>
-                  <span>50%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 50%"></div>
-                </div>
-              </div>
+            <div class="etiquetas aparecer">
+              <span>ANSI C</span><span>ESTRUCTURAS DE DATOS</span>
+            </div>
+            <div class="aparecer d2" style="margin-top: 2rem">
+              <a
+                href="https://github.com/cruz-jenifer/Gestion-Datos-Mayorista-ANSI-C.git"
+                target="_blank"
+                class="btn-llamativo objetivo-hover"
+              >
+                <span class="texto-btn">VER REPOSITORIO</span
+                ><span class="icono-btn">→</span>
+              </a>
             </div>
           </div>
-        </section>
-      </section>
-      <section id="proyectos">
-        <h2>Mis proyectos</h2>
-
-        <div class="carrusel">
-          <input type="radio" name="slides" id="slide-1" checked />
-          <input type="radio" name="slides" id="slide-2" />
-
-          <div class="slides">
-            <div class="slide" id="proyecto-1">
-              <img
-                src="images/cine.png"
-                alt="Proyecto Cine"
-                class="proyecto-img"
-              />
-              <div class="proyecto-info">
-                <h3>Página recetas</h3>
-                <p>
-                  Este proyecto es una página web de recetas de cocina donde se
-                  ven sus ingredientes, pasos y una breve descripción.ademas de
-                  la información nutricional.
-                </p>
+          <div class="visor-proyecto objetivo-hover tilt">
+            <div class="track-imagenes">
+              <div class="slide">
+                <img src="bimg1.jpg" class="img-scroll" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="bimg4.png" class="img-scroll" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="bimg5.png" class="img-scroll" loading="lazy" />
               </div>
             </div>
+            <button class="nav-btn prev objetivo-hover" data-accion="anterior">
+              &#10094;
+            </button>
+            <button class="nav-btn next objetivo-hover" data-accion="siguiente">
+              &#10095;
+            </button>
+            <div class="puntos">
+              <div class="punto activo" data-k="0"></div>
+              <div class="punto" data-k="1"></div>
+              <div class="punto" data-k="2"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="contenedor-seccion">
+        <span class="texto-gradiente" data-en="TECHNICAL SKILLS"
+          >HABILIDADES TÉCNICAS</span
+        >
 
-            <div class="slide" id="proyecto-2">
-              <img
-                src="images/restaurant.png"
-                alt="Proyecto Restaurante"
-                class="proyecto-img"
-              />
-              <div class="proyecto-info">
-                <h3>Página restaurant</h3>
-                <p>
-                  Este proyecto es una página web de un restaurante, donde se
-                  muestra información sobre el menú, horarios y ubicación.
-                </p>
-              </div>
+        <div class="grilla-habilidades">
+          <div class="item-habilidad aparecer">
+            <div class="info-habilidad">
+              <span>FRONTEND (React / Next.js)</span>
+              <span class="numero-porcentaje">80%</span>
+            </div>
+            <div class="barra-progreso-fondo">
+              <div class="barra-relleno" style="--progreso: 80%"></div>
             </div>
           </div>
 
-          <div class="controls">
-            <label for="slide-1" class="prev">‹</label>
-            <label for="slide-2" class="next">›</label>
+          <div class="item-habilidad aparecer delay-1">
+            <div class="info-habilidad">
+              <span>BACKEND (Node.js / Express)</span>
+              <span class="numero-porcentaje">85%</span>
+            </div>
+            <div class="barra-progreso-fondo">
+              <div class="barra-relleno" style="--progreso: 85%"></div>
+            </div>
           </div>
 
-          <div class="bullets">
-            <label for="slide-1" class="bullet"></label>
-            <label for="slide-2" class="bullet"></label>
+          <div class="item-habilidad aparecer delay-2">
+            <div class="info-habilidad">
+              <span>LENGUAJES (C / JavaScript)</span>
+              <span class="numero-porcentaje">95%</span>
+            </div>
+            <div class="barra-progreso-fondo">
+              <div class="barra-relleno" style="--progreso: 95%"></div>
+            </div>
+          </div>
+
+          <div class="item-habilidad aparecer delay-3">
+            <div class="info-habilidad">
+              <span>DATABASE (MongoDB / SQL)</span>
+              <span class="numero-porcentaje">80%</span>
+            </div>
+            <div class="barra-progreso-fondo">
+              <div class="barra-relleno" style="--progreso: 80%"></div>
+            </div>
           </div>
         </div>
-      </section>
-
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="cards-contacto">
-          <a href="images/icon.png" target="_blank">
-            <img src="images/icon.png" alt="Icono de correo" />
-          </a>
-          <a href="images/icon2.png" target="_blank">
-            <img src="images/icon2.png" alt="Icono de LinkedIn" />
-          </a>
-          <a href="images/icon3.png" target="_blank">
-            <img src="images/icon3.png" alt="Icono de GitHub" />
-          </a>
+      </div>
+    </section>
+    <footer id="contacto">
+      <div class="fondo-footer">
+        <div class="grilla"></div>
+        <div class="luz-interactiva" id="luzFooter"></div>
+      </div>
+      <div class="contenedor-seccion">
+        <span class="texto-gradiente" data-en="CONTACT">CONTACTO</span>
+        <p class="subtitulo-contacto" data-en="HAVE A PROJECT?">
+          ¿TIENES UN PROYECTO?
+        </p>
+        <div class="links-contacto">
+          <a
+            href="mailto:cruz.jenifer.j@gmail.com"
+            class="link-grande objetivo-hover"
+            >EMAIL</a
+          >
+          <a
+            href="https://linkedin.com/in/cruz-jenifer"
+            target="_blank"
+            class="link-grande objetivo-hover"
+            >LINKEDIN</a
+          >
+          <a
+            href="https://github.com/cruz-jenifer"
+            target="_blank"
+            class="link-grande objetivo-hover"
+            >GITHUB</a
+          >
         </div>
-      </section>
-
-      <aside>
-        <h3>Descargas</h3>
-        <ul>
-          <li><a href="cv.pdf" download>Mi CV en PDF</a></li>
-          <li><a href="certificados.html">Certificados</a></li>
-        </ul>
-      </aside>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
-      <p>Desarrollado con 💻 HTML5 y CSS3</p>
-      <nav>
-        <a href="#inicio">Volver al inicio</a> |
-        <a href="politica-privacidad.html">Política de privacidad</a>
-      </nav>
+        <div class="copyright">&copy; 2026 JENIFER CRUZ | BA</div>
+      </div>
     </footer>
   </body>
 </html>
