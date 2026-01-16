@@ -1015,7 +1015,7 @@ footer {
   background: linear-gradient(90deg, var(--morado), var(--cyan));
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
-  transition: width 3s var(--suavizado); /* Duración de la animación */
+  transition: width 4s var(--suavizado); /* Duración de la animación */
 }
 
 .contenedor-seccion.activo .barra-relleno {
