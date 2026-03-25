@@ -30,13 +30,4 @@ legacy/
 antigravity/
 brain/
 tmp/
-*.webp
-*.png
-*.jpg
-*.jpeg
-!public/*.jpg
-!public/*.png
-!public/*.webp
-!src/assets/*.jpg
-!src/assets/*.png
-!src/assets/*.webp
+
