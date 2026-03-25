@@ -73,7 +73,7 @@ export default function Hero() {
           centerVignette={false}
           outerVignette={false}
           smooth={false}
-          glitchColors={['#4d3798ff', '#c4dee8', '#FA441D']}
+          glitchColors={['#6c44efff', '#c4dee8', '#FA441D']}
         />
       </FluidSnakeReveal>
 

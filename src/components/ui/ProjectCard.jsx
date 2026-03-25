@@ -13,9 +13,11 @@ const ProjectInfo = memo(({ project, className }) => (
       {project.tags.map(tag => <span key={tag}>{tag}</span>)}
     </div>
     <div className="contenedor-btns visible">
-      <a href={project.link} target="_blank" rel="noreferrer" className="btn-llamativo objetivo-hover">
-        <span className="texto-btn">{project.linkText}</span><span className="icono-btn">→</span>
-      </a>
+      {project.link && (
+        <a href={project.link} target="_blank" rel="noreferrer" className="btn-llamativo objetivo-hover">
+          <span className="texto-btn">{project.linkText}</span><span className="icono-btn">→</span>
+        </a>
+      )}
       {project.githubLink && (
         <a href={project.githubLink} target="_blank" rel="noreferrer" className="btn-llamativo repo objetivo-hover">
           <span className="texto-btn">REPOSITORIO</span><span className="icono-btn">→</span>

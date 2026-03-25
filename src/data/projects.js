@@ -6,9 +6,7 @@ export const projects = [
     descEn: 'Comprehensive system developed for UTN with MVC architecture, Node.js, TypeScript and MySQL.',
     detailsEs: 'Implementa un frontend desacoplado en React y Redux Toolkit, permitiendo la gestión total de dueños, mascotas, turnos e historias clínicas bajo seguridad JWT y roles. Destaca por su lógica de negocio robusta, validaciones estrictas y una interfaz SPA moderna, escalable y de alto rendimiento.',
     tags: ['NODE.JS', 'REACT', 'REDUX', 'MYSQL', 'JWT'],
-    link: 'https://cruz-jenifer.github.io/Tp-Final-Jenifer-Cruz/',
     githubLink: 'https://github.com/cruz-jenifer/Tp-Final-Jenifer-Cruz',
-    linkText: 'VER PAGINA',
     images: ['img/vet/vet_1.jpg', 'img/vet/vet_2.jpg', 'img/vet/vet_3.jpg', 'img/vet/vet_4.jpg']
   },
   {

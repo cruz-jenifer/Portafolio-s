@@ -67,6 +67,7 @@ export default function Header() {
           <nav className="nav-desktop">
             <GooeyNav 
               items={[
+                { label: "INICIO", href: "#inicio" },
                 { label: "PERFIL", href: "#perfil" },
                 { label: "PROYECTOS", href: "#proyectos" },
                 { label: "HABILIDADES", href: "#skills" },
@@ -97,6 +98,7 @@ export default function Header() {
         <div className="contenido-menu">
           <h2 className="texto-gradiente">MENÚ</h2>
           <nav className="navegacion">
+            <a href="#inicio" className="link-menu objetivo-hover" onClick={toggleMenu}>INICIO</a>
             <a href="#perfil" className="link-menu objetivo-hover" onClick={toggleMenu}>PERFIL</a>
             <a href="#proyectos" className="link-menu objetivo-hover" onClick={toggleMenu}>PROYECTOS</a>
             <a href="#skills" className="link-menu objetivo-hover" onClick={toggleMenu}>HABILIDADES</a>

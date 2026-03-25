@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 
 // COMPONENTE EFECTO GLITCH TEXTO
 const LetterGlitch = ({
-  glitchColors = ['#450875', '#c4dee8', '#79ff39'],
+  glitchColors = ['#9000ffff', '#c4dee8', '#79ff39'],
   className = '',
   glitchSpeed = 50,
   centerVignette = false,
@@ -43,10 +43,10 @@ const LetterGlitch = ({
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
       ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16)
-        }
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+      }
       : null;
   };
 

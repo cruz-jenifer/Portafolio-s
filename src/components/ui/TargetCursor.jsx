@@ -128,7 +128,21 @@ const TargetCursor = ({
 
     tickerFnRef.current = tickerFn;
 
-    const moveHandler = e => moveCursor(e.clientX, e.clientY);
+    let wasOverInicio = false;
+    const moveHandler = e => {
+      const isOverInicio = !!(e.target && e.target.closest && e.target.closest('#inicio'));
+      if (isOverInicio !== wasOverInicio) {
+        if (isOverInicio) {
+          document.body.style.cursor = 'auto';
+          gsap.to(cursorRef.current, { opacity: 0, duration: 0.2 });
+        } else {
+          document.body.style.cursor = hideDefaultCursor ? 'none' : 'auto';
+          gsap.to(cursorRef.current, { opacity: 1, duration: 0.2 });
+        }
+        wasOverInicio = isOverInicio;
+      }
+      moveCursor(e.clientX, e.clientY);
+    };
     window.addEventListener('mousemove', moveHandler);
 
     const scrollHandler = () => {
@@ -164,6 +178,7 @@ const TargetCursor = ({
 
     const enterHandler = e => {
       const directTarget = e.target;
+      if (directTarget && directTarget.closest && directTarget.closest('#inicio')) return;
       const allTargets = [];
       let current = directTarget;
       while (current && current !== document.body) {

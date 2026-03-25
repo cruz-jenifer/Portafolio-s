@@ -24,7 +24,7 @@ export default function Profile() {
               </p>
             </div>
             <div className="aparecer visible d4">
-              <a href="/CV_Jenifer_Cruz_Ing_Informatica_IT.pdf" target="_blank" rel="noreferrer" className="boton-cv objetivo-hover">DESCARGAR CV</a>
+              <a href="/img/CV_Jenifer_Cruz_Junior_IT.pdf" download="CV_Jenifer_Cruz.pdf" target="_blank" rel="noreferrer" className="boton-cv objetivo-hover">DESCARGAR CV</a>
             </div>
             
             <div className="lista-educacion">
