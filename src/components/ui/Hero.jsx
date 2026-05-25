@@ -83,13 +83,12 @@ export default function Hero() {
           className={`titulo-hero ${hasMoved ? 'expandido' : ''}`}
           id="tituloDinamico"
         >
-          {hasMoved ? (
-            <>FULL<br />STACK<br />DEV.</>
-          ) : 'PORTAFOLIO'}
+          PORTAFOLIO
         </h1>
         <p ref={subtitleRef} className="subtitulo-hero">INGENIERÍA & CÓDIGO</p>
 
-        <div className="selector-idioma en-hero objetivo-hover">
+        {/* IMPORTANTE: Selector de idioma temporalmente oculto para no competir con el botón del chatbot en la esquina inferior derecha. Se debe reubicar y desarrollar más adelante. */}
+        {/* <div className="selector-idioma en-hero objetivo-hover">
           <div className="globo-3d">
             <div className="anillo"></div>
             <div className="anillo"></div>
@@ -100,7 +99,7 @@ export default function Hero() {
             <span className="btn-idioma activo" data-lang="es">ES</span>|
             <span className="btn-idioma" data-lang="en">EN</span>
           </div>
-        </div>
+        </div> */}
       </div>
       <a href="#perfil" className="scroll-down objetivo-hover" aria-label="Ir abajo">
         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
