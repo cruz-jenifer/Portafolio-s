@@ -5,6 +5,9 @@ import React, { useState, useRef, useEffect, useCallback, memo } from 'react';
 const ProjectInfo = memo(({ project, className }) => (
   <div className={className}>
     <h3 className="titulo-proyecto">{project.title}</h3>
+    {project.subtitle && (
+      <div className="subtitulo-proyecto">{project.subtitle}</div>
+    )}
     <p className="aparecer visible" dangerouslySetInnerHTML={{ __html: project.descEs }}></p>
     {project.detailsEs && (
       <p className="aparecer visible d1" style={{ marginTop: '10px', fontSize: '0.9em', opacity: 0.8 }} dangerouslySetInnerHTML={{ __html: project.detailsEs }}></p>
@@ -131,13 +134,17 @@ export default function ProjectCard({ project, alignRight }) {
             </div>
           ))}
         </div>
-        <button className="nav-btn prev objetivo-hover" onClick={handlePrev}>&#10094;</button>
-        <button className="nav-btn next objetivo-hover" onClick={handleNext}>&#10095;</button>
-        <div className="puntos">
-          {project.images.map((_, i) => (
-            <div key={i} className={`punto ${i === activeSlide ? 'activo' : ''}`} onClick={() => setActiveSlide(i)}></div>
-          ))}
-        </div>
+        {project.images.length > 1 && (
+          <>
+            <button className="nav-btn prev objetivo-hover" onClick={handlePrev}>&#10094;</button>
+            <button className="nav-btn next objetivo-hover" onClick={handleNext}>&#10095;</button>
+            <div className="puntos">
+              {project.images.map((_, i) => (
+                <div key={i} className={`punto ${i === activeSlide ? 'activo' : ''}`} onClick={() => setActiveSlide(i)}></div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       {!alignRight && <ProjectInfo project={project} className="info-proyecto" />}

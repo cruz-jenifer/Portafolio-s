@@ -46,24 +46,12 @@ export const projects = [
   },
   {
     id: 5,
-    title: 'EL BODEGÓN DEL BARRIO',
-    descEs: 'Interfaz rústica de alto impacto visual optimizada para la conversión mediante Vanilla JS.',
-    descEn: 'High visual impact rustic interface optimized for conversion using Vanilla JS.',
-    detailsEs: 'Implementa navegación por anclas, cuadrículas de productos estructuradas y llamadas a la acción directas vía WhatsApp mediante manipulación del DOM. El enfoque técnico prioriza la carga ultrarrápida de recursos gráficos pesados, garantizando una experiencia de usuario fluida y nativa en dispositivos móviles.',
-    tags: ['VANILLA JS', 'HTML5', 'CSS3', 'DOM'],
-    link: 'https://proyect-hamburgueseria.vercel.app/',
-    linkText: 'VER PAGINA',
-    images: ['img/rest/rest_1.jpg', 'img/rest/rest_2.jpg', 'img/rest/rest_3.jpg', 'img/rest/rest_4.jpg', 'img/rest/rest_5.jpg']
-  },
-  {
-    id: 6,
-    title: 'SERENA NAILS',
-    descEs: 'Sitio premium centrado en una estética minimalista y lujosa. Desarrollado con Vanilla JS.',
-    descEn: 'Premium site centered on a minimalist and luxurious aesthetic. Developed with Vanilla JS.',
-    detailsEs: 'Utiliza manipulación del DOM para interacciones fluidas, como carruseles de imágenes y acordeones de FAQ, manteniendo un rendimiento impecable. La arquitectura integra mapas interactivos estilizados y un diseño tipográfico sofisticado, reflejando exclusividad a través de código limpio y optimización de recursos.',
-    tags: ['VANILLA JS', 'HTML5', 'CSS3', 'DOM'],
-    link: 'https://proyect-centro-de-unas.vercel.app/',
-    linkText: 'VER PAGINA',
-    images: ['img/uñas/unas_1.jpg', 'img/uñas/unas_2.jpg', 'img/uñas/unas_3.jpg', 'img/uñas/unas_4.jpg']
+    title: 'AUTOMATIZACIÓN CAPSTONE PROJECT',
+    subtitle: 'Proyecto grupal multidisciplinario',
+    descEs: 'Diseñé con mi equipo e implementé en Make una arquitectura con Gemini Flash que automatiza 1.200+ reembolsos/día, reduciendo demoras de 15 días a tiempo real. Desarrollé 2 agentes de IA: uno para validación fiscal (CAE/CUIT) y otro para extracción a JSON con temperature=0. Incluye ruteo Human-in-the-Loop (>787k ARS), alertas automáticas a IT y borrado Zero Data Retention de datos médicos.',
+    descEn: 'Designed with my team and implemented an architecture in Make using Gemini Flash that automates 1,200+ refunds/day, reducing delays from 15 days to real-time. Developed 2 AI agents: one for fiscal validation (CAE/CUIT) and another for JSON extraction with temperature=0. Includes Human-in-the-Loop routing (>787k ARS), automated IT alerts, and Zero Data Retention erasure of medical data.',
+    detailsEs: '',
+    tags: ['MAKE.COM', 'GEMINI FLASH', 'IA', 'JSON', 'AUTOMATIZACIÓN'],
+    images: ['img/capstone/Captura de pantalla 2026-08-07 210208.jpg']
   }
 ];

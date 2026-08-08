@@ -681,9 +681,9 @@ section {
 .tarjeta-proyecto {
   margin-bottom: clamp(4rem, 10vh, 10rem);
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 3rem;
-  align-items: flex-start;
+  align-items: center;
   background: rgba(5, 5, 5, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -701,7 +701,7 @@ section {
 }
 
 .tarjeta-proyecto.derecha {
-  grid-template-columns: 0.8fr 1.3fr;
+  grid-template-columns: 1fr 1.4fr;
 }
 
 .tarjeta-proyecto.derecha .visor-proyecto {
@@ -709,10 +709,16 @@ section {
 }
 
 .visor-proyecto {
-  min-height: clamp(250px, 40vw, 500px);
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at center, #15151f 0%, #09090e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .visor-proyecto::after {
@@ -749,19 +755,26 @@ section {
 .slide {
   min-width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .slide img {
-  height: 120%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
   transition:
-    0.1s linear,
+    transform 0.3s ease,
     filter 0.5s;
-  filter: grayscale(1);
+  filter: grayscale(0.2);
 }
 
 .tarjeta-proyecto:hover .slide img {
   filter: grayscale(0);
+  transform: scale(1.02);
 }
 
 .nav-btn {
@@ -819,7 +832,22 @@ section {
   font-family: var(--f1);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   color: var(--blanco);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-proyecto {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--f2);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #c7bbf5;
+  background: rgba(82, 39, 255, 0.15);
+  border: 1px solid rgba(130, 80, 255, 0.35);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
 }
 
 .etiquetas span {
