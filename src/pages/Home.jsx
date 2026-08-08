@@ -1,12 +1,12 @@
 // IMPORTACIONES
 import React, { Suspense, lazy } from 'react';
-import TargetCursor from '../components/ui/TargetCursor';
 import Header from '../components/layout/Header';
 import Hero from '../components/ui/Hero';
 import Profile from '../components/ui/Profile';
 import Projects from '../components/ui/Projects';
 import Skills from '../components/ui/Skills';
 import Footer from '../components/layout/Footer';
+import NeonBubble from '../components/ui/NeonBubble';
 
 const LiquidEther = lazy(() => import('../components/ui/LiquidEther'));
 
@@ -15,13 +15,7 @@ export default function Home() {
   // RENDERIZADO
   return (
     <div className="app-container">
-      <TargetCursor 
-        spinDuration={2}
-        hideDefaultCursor
-        parallaxOn
-        hoverDuration={0.2}
-      />
-      
+
       <div className="background-liquid">
         <Suspense fallback={null}>
           <LiquidEther
@@ -54,6 +48,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <NeonBubble />
     </div>
   );
 }

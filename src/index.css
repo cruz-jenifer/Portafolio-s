@@ -29,7 +29,6 @@ body {
   font-family: var(--f2);
   overflow-x: hidden;
   width: 100%;
-  cursor: none;
 }
 
 a {
@@ -1133,7 +1132,6 @@ footer {
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
   padding: 0 25px 0 20px;
   overflow: hidden;
-  cursor: none;
   display: flex;
   align-items: center;
   transition:
